@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>QuizUP !</h1>
+    </header>
+    <main>
+      <form id="name-form">
+        <p style="font-style: italic; font-size: 30px; color: #50052f;"> 🎯🧠  Test Your Knowledge, Challenge Your Limits!  ✨🎯</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <input type="text" placeholder="Enter your name" name="name">
+        <input type="submit" value="Start" class="btn btn-rounded-square">
+        <p class="error">Error message</p>
+      </form>
+      <div id="core-game-container">
+        <div id="timer-container">
+          <canvas id="timer" width="80" height="80"></canvas>
+        </div>
+        <div id="qa">
+          <div id="q-container">
+            <p id="question"></p>
+            <p id="q-num">1</p>
+          </div>
+          <div id="answers">
+          </div>
+        </div>
+        <div id="core-game-container-footer">
+          <div>
+            <button id="reset" class="btn">Reset</button>
+            <button class="start-new-game btn">New Game</button>
+          </div>
+          <h3 id="player-name">Name</h3>
+        </div>
+      </div>
+      <div id="results-container">
+        <h2>Results</h2>
+        <div id="results">
+          <div id="results-general">
+            <div id="quiz-results">
+            </div>
+            <div id="results-actions">
+              <button class="start-new-game btn">Start New Game</button>
+              <button id="replay" class="btn">Replay</button>
+            </div>
+            <div id="leaderboards">
+              <h3>Leaderboards</h3>
+              <div id="leaderboard-tables">
+                <table id="leaderboard-correct-answers" class="leaderboard-table">
+                  <caption>Correct Answers</caption>
+                  <thead>
+                    <tr>
+                      <th>Player</th>
+                      <th>#</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+                <table id="leaderboard-accuracy" class="leaderboard-table">
+                  <caption>Accuracy</caption>
+                  <thead>
+                    <tr>
+                      <th>Player</th>
+                      <th>%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div id="results-detailed"></div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
